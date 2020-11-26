@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "click-travel-ng"
+  "defaultProject": "click-travel-ng",
+  "cli": {
+    "analytics": "2a204efa-9e2a-41fc-b468-ed7d217a3cb7"
+  }
 }

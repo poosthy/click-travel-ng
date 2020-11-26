@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
+import { ClickTravelService } from './servic/click-travel.service';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LogoComponent } from './logo/logo.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ClickTravelService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
