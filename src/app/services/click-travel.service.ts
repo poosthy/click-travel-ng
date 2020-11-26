@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment'
-import { filter, map } from 'rxjs/operators';
-import {Destination} from '../interfaces/destination'
+import { environment } from '../../environments/environment';
+import { Destination } from '../interfaces/destination';
+import { Billet } from '../interfaces/billet';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -20,6 +20,11 @@ export class ClickTravelService {
 
   getDestination(): Observable<Destination>{
       return  this.http.get<Destination>(environment.BaseApi+"/destination");
+  }
+  getBillet(destination: string){
+    const billet: any ={"where": {"to": destination}}
+
+    return this.http.get<Billet>(environment.Basepi+"/ticket",{})
   }
     
 }
